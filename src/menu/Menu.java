@@ -1,0 +1,18 @@
+package menu;
+public class Menu {
+
+	public static void menu1() {
+		System.out.println("\n==============================");
+		System.out.println("====== MENU ======");
+		System.out.println("\nEscolha uma opção:\n");
+		System.out.println("1 - Inserir aluno");
+		System.out.println("2 - Listar alunos");
+		System.out.println("3 - Atualizar aluno");
+		System.out.println("4 - Deletar aluno");
+		System.out.println("0 - Encerrar o programa");
+	}
+	
+	public static void inserirAluno() {
+		System.out.println("===== Insira os dados do aluno =====");
+	}
+}
