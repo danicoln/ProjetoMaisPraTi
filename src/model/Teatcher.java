@@ -1,19 +1,17 @@
 package model;
 
-import util.Contador;
+import java.time.LocalDateTime;
 
 public class Teatcher extends Person {
 
-	private Integer id;
-	
-	public Teatcher(String name, String birthDate) {
-		super(name, birthDate);
-		this.id = Contador.nextId();
+	public Teatcher(String name, String phone, String birthDate, LocalDateTime dataCadastroPessoa) {
+		super(name, phone, birthDate, dataCadastroPessoa);
 	}
+
+	private Integer id;
 
 	public Integer getId() {
 		return id;
 	}
-
 
 }

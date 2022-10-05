@@ -1,12 +1,21 @@
 package service;
 
+import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Scanner;
 
 import model.Student;
 import repository.StudentRepository;
 
+/*aula 31/08
+ * 
+ * Camada responsável pela lógica de negócio
+ * 
+ * Service é o que conversa com os Repository*/
+
 public class StudentService {
 
+	/*dependências*/
 	Scanner sc;
 	StudentRepository repository = new StudentRepository();
 	
@@ -14,23 +23,36 @@ public class StudentService {
 		this.sc = sc;
 	}
 	
-//	private Student saveStudent() {
-//		System.out.println("Digite seu nome: ");
-//		String name = sc.nextLine();
-//		System.out.println("Digite seu telefone: ");
-//		String phone = sc.nextLine();
-//		System.out.println("Digite sua data de aniversário: ");
-//		String birthDate = sc.nextLine();
-//		
-//		Student student = new Student(name, phone, birthDate);
-//		
-//		this.repository.create(student);
-//		
-//		try {
-//			Thread.sleep(2000l);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		return student;
-//	}
+	public Student confereMatricula(Integer matricula) {
+		List<Student> listaAlunos = repository.readAll();
+		for (Student student : listaAlunos) {
+			if(student.getRegistration().equals(matricula)) {
+				return student;
+			}
+
+		}
+		return saveStudent();
+	}
+	
+	
+	private Student saveStudent() {
+		System.out.println("Digite o nome do aluno: ");
+		String name = sc.nextLine();
+		System.out.println("Digite o telefone do aluno: ");
+		String phone = sc.nextLine();
+		System.out.println("Digite a data de aniversário: ");
+		String birthDate = sc.nextLine();
+		Integer registration = sc.nextInt();
+		
+		Student student = new Student(name, phone, birthDate, LocalDateTime.now(), registration);
+		
+		this.repository.create(student);
+		
+		try {
+			Thread.sleep(2000l);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return student;
+	}
 }

@@ -12,7 +12,7 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 
-		StudentService service = new StudentService(sc);
+		StudentService studentService = new StudentService(sc);
 		
 		boolean continues = true;
 		do {
@@ -24,24 +24,23 @@ public class Program {
 			switch (opt) {
 			case 1:
 				Menu.inserirAluno();
-					int opt2 = sc.nextInt(); // codigo inserido para nao voltar ao menu
+				Integer matricula = sc.nextInt();
+				Student student = studentService.confereMatricula(matricula);
+					
 				break;
 
 			case 2:
 
 				Menu.listarAlunos();
-				opt2 = sc.nextInt(); // verificar
 				break;
 
 			case 3:
 				
 				Menu.atualizarAluno();
-				opt2 = sc.nextInt(); // verificar
 				break;
 
 			case 4:
 				Menu.deletarAluno();
-				opt2 = sc.nextInt(); // verificar
 				break;	
 				
 			case 0:

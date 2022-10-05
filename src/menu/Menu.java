@@ -14,7 +14,7 @@ public class Menu {
 	}
 
 	public static void inserirAluno() {
-		System.out.println("======= Insira os dados do aluno =======");
+		System.out.println("======= Para inserir os dados do aluno, digite 1 =======");
 	}
 
 	public static void listarAlunos() {
