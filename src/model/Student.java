@@ -21,7 +21,7 @@ public class Student extends Person {
 		this.id = Contador.nextId();
 
 		this.setDataCadastroPessoa(LocalDateTime.now());
-		this.registration = registration;
+		this.registration = Contador.nextReg();
 	}
 
 	/* Getters and Setters */
@@ -48,7 +48,7 @@ public class Student extends Person {
 		if (getClass() != obj.getClass())
 			return false;
 		Student other = (Student) obj;
-		return Objects.equals(id, other.id) && registration == other.registration;
+		return Objects.equals(id, other.id) && Objects.equals(registration, other.registration);
 	}
 
 }

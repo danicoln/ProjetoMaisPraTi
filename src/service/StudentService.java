@@ -31,20 +31,22 @@ public class StudentService {
 			}
 
 		}
-		return saveStudent();
+		return this.saveStudent();
 	}
 	
 	
-	private Student saveStudent() {
+	public Student saveStudent() {
 		System.out.println("Digite o nome do aluno: ");
+		sc.nextLine();
 		String name = sc.nextLine();
 		System.out.println("Digite o telefone do aluno: ");
 		String phone = sc.nextLine();
 		System.out.println("Digite a data de aniversário: ");
 		String birthDate = sc.nextLine();
-		Integer registration = sc.nextInt();
+		System.out.println("Digite a data de aniversário: ");
+//		Integer registration = sc.nextInt();
 		
-		Student student = new Student(name, phone, birthDate, LocalDateTime.now(), registration);
+		Student student = new Student(name, phone, birthDate, LocalDateTime.now());
 		
 		this.repository.create(student);
 		

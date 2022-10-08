@@ -19,14 +19,14 @@ public class Program {
 
 			Menu.menu1();
 			int opt = sc.nextInt();
-			sc.nextLine();
 
 			switch (opt) {
 			case 1:
+				
 				Menu.inserirAluno();
-				Integer matricula = sc.nextInt();
-				Student student = studentService.confereMatricula(matricula);
-					
+				int opt2 = sc.nextInt();
+				Student student = studentService.saveStudent();
+				
 				break;
 
 			case 2:
