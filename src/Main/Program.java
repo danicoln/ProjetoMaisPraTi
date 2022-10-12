@@ -4,15 +4,16 @@ import java.util.Scanner;
 
 import menu.Menu;
 import model.Student;
+import model.User;
 import service.StudentService;
+import service.UserService;
 
 public class Program {
 
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-
-		StudentService studentService = new StudentService(sc);
+		UserService userService = new UserService(sc);
 		
 		boolean continues = true;
 		do {

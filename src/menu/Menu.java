@@ -4,7 +4,7 @@ public class Menu {
 
 	public static void menu1() {
 		System.out.println("========= Acesso ao Sistema ========= \n");
-		System.out.println("| 1. Cadastrar usuário");
+		System.out.println("| 1. Cadastrar pessoa");
 		System.out.println("| 2. Buscar pessoa");
 		System.out.println("| 3. Listar todos alunos");
 		System.out.println("| 4. Remover aluno");
