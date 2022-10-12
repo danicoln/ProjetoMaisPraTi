@@ -1,10 +1,9 @@
 package service;
 
-import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Scanner;
 
 import model.Student;
+import repository.Repository;
 import repository.StudentRepository;
 
 /*aula 31/08
@@ -15,46 +14,15 @@ import repository.StudentRepository;
 
 public class StudentService {
 
-	/*dependências*/
+	/*Injeção de dependências*/
 	Scanner sc;
-	StudentRepository repository = new StudentRepository();
+	StudentRepository studentRepository = new StudentRepository();
+	Repository<Student> repository = new Repository<>();
 	
 	public StudentService(Scanner sc) {
 		this.sc = sc;
-	}
-	
-	public Student confereMatricula(Integer matricula) {
-		List<Student> listaAlunos = repository.readAll();
-		for (Student student : listaAlunos) {
-			if(student.getRegistration().equals(matricula)) {
-				return student;
-			}
-
-		}
-		return this.saveStudent();
+		this.studentRepository.save(new Student ("Daniel", 10, "13/12/1988", "8878", "13246579890")); 
 	}
 	
 	
-	public Student saveStudent() {
-		System.out.println("Digite o nome do aluno: ");
-		sc.nextLine();
-		String name = sc.nextLine();
-		System.out.println("Digite o telefone do aluno: ");
-		String phone = sc.nextLine();
-		System.out.println("Digite a data de aniversário: ");
-		String birthDate = sc.nextLine();
-		System.out.println("Digite a data de aniversário: ");
-//		Integer registration = sc.nextInt();
-		
-		Student student = new Student(name, phone, birthDate, LocalDateTime.now());
-		
-		this.repository.create(student);
-		
-		try {
-			Thread.sleep(2000l);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		return student;
-	}
 }

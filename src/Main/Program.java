@@ -24,7 +24,6 @@ public class Program {
 			case 1:
 				Menu.infoCpf();
 				String cpf = sc.next();
-				studentService.saveStudent();
 				
 				break;
 
