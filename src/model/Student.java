@@ -1,54 +1,20 @@
 package model;
 
-import java.time.LocalDateTime;
-import java.util.Objects;
-
 import util.Contador;
 
-public class Student extends Person {
+public class Student extends User {
 
 	private Integer id;
 
-	private Integer registration;
-
-	public Student(String name, String phone, String birthDate, LocalDateTime dataCadastroPessoa) {
-		super(name, phone, birthDate, dataCadastroPessoa);
-	}
-
-	public Student(String name, String phone, String birthDate, LocalDateTime dataCadastroPessoa,
-			Integer registration) {
-		super(name, phone, birthDate, dataCadastroPessoa);
+	public Student(String name, String birthDate, String phone, String cpf) {
+		super(name, birthDate, phone, cpf);
 		this.id = Contador.nextId();
-
-		this.setDataCadastroPessoa(LocalDateTime.now());
-		this.registration = Contador.nextReg();
 	}
 
 	/* Getters and Setters */
 
-	public Integer getRegistration() {
-		return registration;
-	}
-
-	public void setRegistration(Integer registration) {
-		this.registration = registration;
-	}
-
 	@Override
-	public int hashCode() {
-		return Objects.hash(id, registration);
+	public Integer getId() {
+		return super.getId();
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Student other = (Student) obj;
-		return Objects.equals(id, other.id) && Objects.equals(registration, other.registration);
-	}
-
 }

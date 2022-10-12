@@ -5,11 +5,11 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 
-import model.Teatcher;
+import model.Person;
 
 public class TeatcherRepository {
 
-private Map<Integer, Teatcher> database;
+private Map<Integer, Person> database;
 	
 	public TeatcherRepository() {
 		this.database = new TreeMap<>();
@@ -17,15 +17,15 @@ private Map<Integer, Teatcher> database;
 
 	/*CRUD*/
 	
-	public void create(Teatcher teatcher) {
+	public void create(Person teatcher) {
 		this.database.put(teatcher.getId(), teatcher);
 	}
 	
-	public List<Teatcher> readAll(){
+	public List<Person> readAll(){
 		return this.database.values().stream().collect(Collectors.toList());
 	}
 	
-	public void update (Teatcher teatcher, Integer id) { // verificar e implementar o metodo update
+	public void update (Person teatcher, Integer id) { // verificar e implementar o metodo update
 		this.database.put(id, teatcher);
 	}
 	

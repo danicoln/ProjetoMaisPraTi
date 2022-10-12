@@ -19,13 +19,12 @@ public class Program {
 
 			Menu.menu1();
 			int opt = sc.nextInt();
-
 			switch (opt) {
+			
 			case 1:
-				
-				Menu.inserirAluno();
-				int opt2 = sc.nextInt();
-				Student student = studentService.saveStudent();
+				Menu.infoCpf();
+				String cpf = sc.next();
+				studentService.saveStudent();
 				
 				break;
 
