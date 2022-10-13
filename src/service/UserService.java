@@ -77,27 +77,29 @@ public class UserService {
 		return null; // verificar o retorno
 	}
 
-	public User findUser(String user) {
-		int optionChoose = sc.nextInt();
-		if (optionChoose == 1) {
-			System.out.println("Informe o CPF da pessoa: ");
-			String cpfPerson = sc.next();
-
-			Person person = this.personRepository.findForCpf(cpfPerson);
-			person.printData();
-			return person;
-
-		} else if (optionChoose == 2) {
-			System.out.println("Informe o CPF do aluno: ");
-			String cpfStudent = sc.next();
-
-			Student student = this.studentRepository.findForCpf(cpfStudent);
-			student.printData();
-			return student;
-
-		} else if (optionChoose == 3) {
-			System.out.println("Operação encerrada!");
-		}
-		return null;
-	}
+//	public User findUser(String user) {
+//		int optionChoose = sc.nextInt();
+//		if (optionChoose == 1) {
+//			System.out.println("Informe o CPF da pessoa: ");
+//			String cpfPerson = sc.next();
+//
+//			Person person = this.personRepository.findForCpf(cpfPerson);
+//			person.printData();
+//			return person;
+//
+//		} else if (optionChoose == 2) {
+//			System.out.println("Informe o CPF do aluno: ");
+//			String cpfStudent = sc.next();
+//
+//			Student student = this.studentRepository.findForCpf(cpfStudent);
+//			student.printData();
+//			return student;
+//
+//		} else if (optionChoose == 3) {
+//			System.out.println("Operação encerrada!");
+//		}
+//		return null;
+//	}
+	
+	
 }

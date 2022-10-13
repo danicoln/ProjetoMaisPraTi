@@ -3,9 +3,8 @@ package Main;
 import java.util.Scanner;
 
 import menu.Menu;
-import model.Student;
-import model.User;
-import service.StudentService;
+import model.Person;
+import service.PersonService;
 import service.UserService;
 
 public class Program {
@@ -14,7 +13,7 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 		UserService userService = new UserService(sc);
-		
+		PersonService personService = new PersonService(sc);
 		boolean continues = true;
 		do {
 
@@ -31,8 +30,16 @@ public class Program {
 			case 2:
 
 				Menu.findUser();
-				String cpf2 = sc.nextLine();
-				userService.findUser(cpf2);
+				int chooseOption = sc.nextInt();
+				if(chooseOption == 1) {
+					System.out.println("Informe o CPF da pessoa: ");
+					String cpfDoc = sc.next();
+					Person person = personService.findPerson(cpfDoc);
+					
+							
+				}
+//				String cpf2 = sc.nextLine();
+//				userService.findUser(cpf2);
 				break;
 
 			case 3:

@@ -24,9 +24,9 @@ public class Menu {
 	}
 
 	public static void findUser() {
-		System.out.println("======= Escolha a opção =======");
-		System.out.println("| 1. Informe o CPF da pessoa");
-		System.out.println("| 2. Informe o CPF do aluno");
+		System.out.println("======= Escolha a opção desejada =======");
+		System.out.println("| 1. Buscar uma pessoa");
+		System.out.println("| 2. Buscar um aluno");
 		System.out.println("| 3. Encerrar");
 	}
 
