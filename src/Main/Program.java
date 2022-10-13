@@ -25,7 +25,7 @@ public class Program {
 			case 1:
 				Menu.infoCpf();
 				String cpf = sc.next();
-				
+				userService.checkCpf(cpf);
 				break;
 
 			case 2:
