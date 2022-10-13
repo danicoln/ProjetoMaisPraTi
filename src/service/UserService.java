@@ -6,15 +6,19 @@ import java.util.Scanner;
 import model.Person;
 import model.Student;
 import model.User;
+import repository.PersonRepository;
 import repository.Repository;
+import repository.StudentRepository;
 
 public class UserService {
 
 	/*Dependency Injections*/
 	Scanner sc;
 	Repository<User> userRepository = new Repository<>();
-	Repository<Person> personRepository = new Repository<>();
-	Repository<Student> studentRepository = new Repository<>();
+//	Repository<Person> personRepository = new Repository<>();
+//	Repository<Student> studentRepository = new Repository<>();
+	PersonRepository personRepository = new PersonRepository();
+	StudentRepository studentRepository = new StudentRepository();
 	
 	/*Constructor with parameters*/
 	
@@ -70,6 +74,30 @@ public class UserService {
 			Student student = new Student(name, gradeFinal, dateBirth, phone, cpf);
 			this.studentRepository.save(student);
 			return student;
+		}
+		return null; // verificar o retorno
+	}
+	
+	public User findUser(String user) {
+		int optionChoose = sc.nextInt();
+		if(optionChoose == 1) {
+			System.out.println("Informe o CPF da pessoa: ");
+			String cpfPerson = sc.next();
+			
+			Person person = this.personRepository.findForCpf(cpfPerson);
+			person.printData();
+			return person;
+			
+		}else if(optionChoose == 2) {
+			System.out.println("Informe o CPF do aluno: ");
+			String cpfStudent = sc.next();
+			
+			Student student = this.studentRepository.findForCpf(cpfStudent);
+			student.printData();
+			return student;
+			
+		}else if(optionChoose == 3) {
+			System.out.println("Operação encerrada!");
 		}
 		return null;
 	}

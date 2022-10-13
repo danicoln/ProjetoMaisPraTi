@@ -97,5 +97,16 @@ public class User implements Database {
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
-
+	
+	public void printData() {
+		System.out.println("====================================================================================================");
+		System.out.println("ID: "+ getId());
+		System.out.println("Nome: "+ getName());
+		System.out.println("Data de Nascimento: "+ getBirthDate());
+		System.out.println("Telefone: " + getPhone());
+		System.out.println("CPF: " +getCpf());
+		System.out.println("Data do cadastro: " + getDateCreate());
+		System.out.println("Data da alteração: " + getDateUpdate());
+		System.out.println("====================================================================================================\n");
+	}
 }

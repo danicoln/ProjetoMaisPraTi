@@ -11,5 +11,10 @@ public class Person extends User {
 		this.id = Contador.nextId();
 	}
 
+	@Override
+	public void printData() {
+		// TODO Auto-generated method stub
+		super.printData();
+	}
 
 }

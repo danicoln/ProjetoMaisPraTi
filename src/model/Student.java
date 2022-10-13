@@ -11,6 +11,7 @@ public class Student extends User {
 		super(name, birthDate, phone, cpf);
 		this.gradeFinal = gradeFinal;
 		this.id = Contador.nextId();
+		
 	}
 
 	/* Getters and Setters */
@@ -26,6 +27,11 @@ public class Student extends User {
 
 	public void setGradeFinal(double gradeFinal) {
 		this.gradeFinal = gradeFinal;
+	}
+	
+	@Override
+	public void printData() {
+		super.printData();
 	}
 
 }

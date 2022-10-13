@@ -30,7 +30,9 @@ public class Program {
 
 			case 2:
 
-				Menu.listarAlunos();
+				Menu.findUser();
+				String cpf2 = sc.nextLine();
+				userService.findUser(cpf2);
 				break;
 
 			case 3:
