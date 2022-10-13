@@ -13,7 +13,6 @@ public class Person extends User {
 
 	@Override
 	public void printData() {
-		// TODO Auto-generated method stub
 		super.printData();
 	}
 
