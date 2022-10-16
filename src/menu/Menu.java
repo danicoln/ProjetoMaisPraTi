@@ -12,7 +12,7 @@ public class Menu {
 		System.out.println("| 0. Sair do sistema");
 		System.out.println("\n=====================================");
 	}
-	
+
 	public static void infoCpf() {
 		System.out.println("Informe o CPF: \n");
 	}
@@ -23,7 +23,7 @@ public class Menu {
 		System.out.println("| 2. Buscar um aluno");
 		System.out.println("| 3. Encerrar");
 	}
-	
+
 	public static void userList() {
 		System.out.println("========= Escolha a opção =========\n");
 		System.out.println("| 1. Listar alunos");
@@ -31,21 +31,21 @@ public class Menu {
 		System.out.println("| 3. Para voltar ao menu anterior");
 	}
 
-	public static void listStudents() {
+	public static void studentsList() {
 		System.out.println("========= Lista de alunos =========\n");
 	}
-	
+
 	public static void listPerson() {
 		System.out.println("========= Lista de pessoas =========\n");
 	}
-	
+
 	public static void removeUser() {
 		System.out.println("Escolha a opção desejada: ");
 		System.out.println("| 1. Remover um aluno");
 		System.out.println("| 2. Remover uma pessoa");
 	}
-	
-	public static void confirmRemoval(){
+
+	public static void confirmRemoval() {
 		System.out.println("Confirma a remoção do aluno?\n");
 		System.out.println("| 1. Confirmar");
 		System.out.println("| 2. Cancelar");
@@ -57,6 +57,5 @@ public class Menu {
 		System.out.println("| 2. Atualizar pessoa");
 		System.out.println("| 3. Retornar ao menu anterior");
 	}
-	
-	
+
 }
