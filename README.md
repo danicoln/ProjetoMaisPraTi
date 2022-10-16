@@ -1,5 +1,5 @@
 # Projeto do Programa Mais Pra Ti
-[![NPM](https://img.shields.io/badge/Status-em%20desenvolvimento-green)
+[![NPM](https://img.shields.io/npm/l/react)](https://img.shields.io/badge/Status-em%20desenvolvimento-green)
 
 # Sobre o projeto
 
