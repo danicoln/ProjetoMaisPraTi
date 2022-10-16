@@ -37,10 +37,11 @@ cd backend
 
 Daniel Lincoln M. F. Silva
 
-LinkedIn: https://www.linkedin.com/in/daniellincolndev
+LinkedIn: https://www.linkedin.com/in/daniellincolndev 
+
 e-mail: lincolndeveloper@outlook.com
 
-```
+==============================================================================================
 
 # Atividades:
 Criar um CRUD (Create, Read, Update, Delete) de pessoas/alunos no terminal usando somente Java:
