@@ -34,7 +34,7 @@ public class UserService {
 		List<User> listUser = this.userRepository.findAll();
 		for (User user : listUser) {
 			if (user.getCpf().equalsIgnoreCase(cpf)) {
-//				user.imprimeDados  IMPLEMENTAR
+				user.printData(); 
 				System.out.println("O CPF informado já existe para esta pessoa! Tente novamente!");
 				return user;
 			}
@@ -69,7 +69,7 @@ public class UserService {
 		if (info == 2) {
 			Person newPerson = new Person(name, dateBirth, phone, cpf);
 
-//			newPerson.imprimeDados IMPLEMENTAR
+			newPerson.printData();
 			System.out.println("Pessoa cadastrada com sucesso!");
 			return this.personRepository.save(newPerson);
 
@@ -79,7 +79,7 @@ public class UserService {
 			double gradeFinal = sc.nextDouble();
 			Student student = new Student(name, gradeFinal, dateBirth, phone, cpf);
 			System.out.println("Aluno(a) cadastrado(a) com sucesso!");
-//			sudent.imprimeDados IMPLEMENTAR
+			student.printData(); 
 			return this.studentRepository.save(student);
 		}
 		return null; // verificar o retorno - add exception
@@ -92,16 +92,16 @@ public class UserService {
 			System.out.println("Informe o CPF da pessoa: ");
 			String cpfPerson = sc.next();
 
-			Person person = this.personRepository.findForCpf(docCpf);
-//			person.imprimeDados(); IMPLEMENTAR
+			Person person = this.personRepository.findForCpf(cpfPerson);
+			person.printData(); 
 			return person;
 
 		} else if (opChoose == 2) {
 			System.out.println("Informe o CPF do aluno: ");
 			String cpfStudent = sc.next();
 
-			Student student = this.studentRepository.findForCpf(docCpf);
-//			student.imprimeDados(); IMPLEMENTAR
+			Student student = this.studentRepository.findForCpf(cpfStudent);
+			student.printData(); 
 			return student;
 
 		} else if (opChoose == 3) {
@@ -169,7 +169,7 @@ public class UserService {
 			String name = sc.nextLine();
 			student.setName(name);
 			student.setDateUpdate(LocalDateTime.now());
-//			student.imprimeDados IMPLEMENTAR
+			student.printData();
 			System.out.println("| Nome atualizado com sucesso!");
 			return student;
 
@@ -182,7 +182,7 @@ public class UserService {
 			String dtNasc = sc.nextLine();
 			student.setBirthDate(dtNasc);
 			student.setDateUpdate(LocalDateTime.now());
-//			student.imprimeDados IMPLEMENTAR
+			student.printData();
 			System.out.println("| Data de nascimento atualizada com sucesso!");
 			return student;
 
@@ -195,7 +195,7 @@ public class UserService {
 			String phone = sc.nextLine();
 			student.setPhone(phone);
 			student.setDateUpdate(LocalDateTime.now());
-//			student.imprimeDados IMPLEMENTAR
+			student.printData();
 			System.out.println("| Telefone atualizado com sucesso!");
 			return student;
 
@@ -208,7 +208,7 @@ public class UserService {
 			String cpfUpdate = sc.nextLine();
 			student.setCpf(cpfUpdate);
 			student.setDateUpdate(LocalDateTime.now());
-//			student.imprimeDados IMPLEMENTAR
+			student.printData();
 			System.out.println("| CPF atualizado com sucesso!");
 			return student;
 		}
@@ -230,7 +230,7 @@ public class UserService {
 			String name = sc.nextLine();
 			person.setName(name);
 			person.setDateUpdate(LocalDateTime.now());
-//			student.imprimeDados IMPLEMENTAR
+			person.printData();
 			System.out.println("| Nome atualizado com sucesso!");
 			return person;
 
@@ -243,7 +243,7 @@ public class UserService {
 			String dtNasc = sc.nextLine();
 			person.setBirthDate(dtNasc);
 			person.setDateUpdate(LocalDateTime.now());
-//			student.imprimeDados IMPLEMENTAR
+			person.printData();
 			System.out.println("| Data de nascimento atualizada com sucesso!");
 			return person;
 
@@ -256,7 +256,7 @@ public class UserService {
 			String phone = sc.nextLine();
 			person.setPhone(phone);
 			person.setDateUpdate(LocalDateTime.now());
-//			student.imprimeDados IMPLEMENTAR
+			person.printData();
 			System.out.println("| Telefone atualizado com sucesso!");
 			return person;
 
@@ -269,7 +269,7 @@ public class UserService {
 			String cpfUpdate = sc.nextLine();
 			person.setCpf(cpfUpdate);
 			person.setDateUpdate(LocalDateTime.now());
-//			student.imprimeDados IMPLEMENTAR
+			person.printData();
 			System.out.println("| CPF atualizado com sucesso!");
 			return person;
 		}

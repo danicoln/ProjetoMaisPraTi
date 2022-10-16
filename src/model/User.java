@@ -3,7 +3,7 @@ package model;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-import util.Contador;
+import util.Counter;
 
 public class User implements Database {
 
@@ -18,7 +18,7 @@ public class User implements Database {
 	/* Constructor with parameters */
 
 	public User(String name, String birthDate, String phone, String cpf) {
-		this.id = Contador.nextId();
+		this.id = Counter.nextId();
 		this.name = name;
 		this.phone = phone;
 		this.birthDate = birthDate;
@@ -97,16 +97,13 @@ public class User implements Database {
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
-	
+
 	public void printData() {
-		System.out.println("====================================================================================================");
-		System.out.println("ID: "+ getId());
-		System.out.println("Nome: "+ getName());
-		System.out.println("Data de Nascimento: "+ getBirthDate());
-		System.out.println("Telefone: " + getPhone());
-		System.out.println("CPF: " +getCpf());
-		System.out.println("Data do cadastro: " + getDateCreate());
-		System.out.println("Data da alteração: " + getDateUpdate());
-		System.out.println("====================================================================================================\n");
+		System.out.println(
+				"====================================================================================================\n"
+						+ "|ID: " + getId() + "\n" + "|Nome: " + getName() + "\n" + "|Data de nascimento: "
+						+ getBirthDate() + "\n" + "|Telefone: " + getPhone() + "\n" + "|CPF: " + getCpf() + "\n" + "\n"
+						+ "| Data do cadastro: " + getDateCreate() + "\n" + "|Atualizado em: " + getDateUpdate() + "\n"
+						+ "====================================================================================================");
 	}
 }

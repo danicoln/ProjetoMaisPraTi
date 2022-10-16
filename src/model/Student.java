@@ -1,6 +1,6 @@
 package model;
 
-import util.Contador;
+import util.Counter;
 
 public class Student extends User {
 
@@ -10,8 +10,8 @@ public class Student extends User {
 	public Student(String name, double gradeFinal, String birthDate, String phone, String cpf) {
 		super(name, birthDate, phone, cpf);
 		this.gradeFinal = gradeFinal;
-		this.id = Contador.nextId();
-		
+		this.id = Counter.nextId();
+
 	}
 
 	/* Getters and Setters */
@@ -28,10 +28,16 @@ public class Student extends User {
 	public void setGradeFinal(double gradeFinal) {
 		this.gradeFinal = gradeFinal;
 	}
-	
+
 	@Override
 	public void printData() {
-		super.printData();
+		System.out.println(
+				"====================================================================================================\n"
+						+ "|ID: " + getId() + "\n" + "|Nome: " + getName() + "\n" + "|Data de nascimento: "
+						+ getBirthDate() + "\n" + "|Telefone: " + getPhone() + "\n" + "|CPF: " + getCpf() + "\n"
+						+ "|Nota final do curso: " + getGradeFinal() + "\n" + "| Data do cadastro: " + getDateCreate()
+						+ "\n" + "|Atualizado em: " + getDateUpdate() + "\n"
+						+ "====================================================================================================");
 	}
 
 }
