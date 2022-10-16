@@ -276,4 +276,13 @@ public class UserService {
 		return null;
 	}
 
+	public List<Student> studentList() {
+		return this.studentRepository.findAll();
+	}
+
+	public List<Person> personList() {
+		return this.personRepository.findAll();
+
+	}
+
 }
