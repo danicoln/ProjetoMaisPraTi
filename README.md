@@ -6,7 +6,7 @@
 
 O projeto é referente ao trabalho final do treinamento Mais Pra Ti. 
 
-O projeto consiste em adicionar um usuario informando os dádos basicos e caso seja informada uma nota, é criado um(a) aluno(a), caso não seja informada, é criada uma pessoa.
+O projeto consiste em adicionar um usuário informando os dados básicos e caso seja informada uma nota, é criado um(a) aluno(a), caso não seja informada, é criada uma pessoa.
 
 # Tecnologias utilizadas
 ## Back end
@@ -44,30 +44,27 @@ e-mail: lincolndeveloper@outlook.com
 
 
 # Atividades:
-Criar um CRUD (Create, Read, Update, Delete) de pessoas/alunos no terminal usando somente Java:
-Criar pessoa ou aluno;
-Mostrar todas as pessoas e alunos criadas (listar na tela);
-Atualizar dados de uma pessoa ou aluno;
-Deletar uma pessoa ou aluno;
-Encerrar o Programa;
+- Criar um CRUD (Create, Read, Update, Delete) de pessoas/alunos no terminal usando somente Java:
+- Criar pessoa ou aluno;
+- Mostrar todas as pessoas e alunos criadas (listar na tela);
+- Atualizar dados de uma pessoa ou aluno;
+- Deletar uma pessoa ou aluno;
+- Encerrar o Programa;
 
-Inf de pessoa/aluno:
-Nome;
-Telefone;
-Data de Nascimento;
-Data de Cadastro da Pessoa;
-Data da última alteração;
-Nota final do curso;
-Caso o usuario informe a nota final do curso, deve ser criado um aluno. Caso não seja informada, deve ser criada uma pessoa.
+## Informação de pessoa/aluno:
+- Nome;
+- Telefone;
+- Data de Nascimento;
+- Data de Cadastro da Pessoa;
+- Data da última alteração;
+- Nota final do curso;
 
-Criar menu interativo que o usuário possa usar para executar as opções acima.
+## Obs.: Caso o usuário informe a nota final do curso, deve ser criado um aluno. Caso não seja informada, deve ser criada uma pessoa.
 
-O menu deve continuar sendo exibido até que o usuário use a opção de de encerrar a aplicação.
-O avaliado deve usar arrays para armazenar as pessoas criadas;
-O avaliado deve usar herança para que um aluno aproveite todos os dados da pessoa.
+- Criar menu interativo que o usuário possa usar para executar as opções acima.
+- O menu deve continuar sendo exibido até que o usuário use a opção de encerrar a aplicação.
+- O avaliado deve usar arrays para armazenar as pessoas criadas;
+- O avaliado deve usar herança para que um aluno aproveite todos os dados da pessoa.
 
-Todas as informacoes ficam em memoria local. Nao é necessário cadastrar em banco de dados. Ou seja, quando encerrar a aplicação, perde-se todo o histórico.
+Todas as informações ficam em memória local. Não é necessário cadastrar em banco de dados. Ou seja, quando encerrar a aplicação, perde-se todo o histórico.
 Não deve ser usado nenhum framework neste projeto. Deve-se usar recursos nativos do Java.
-O avaliado deve disponibilizar o projeto no Github com link público para que as empresas interessadas na contratação possam avaliá-lo.
-
-
