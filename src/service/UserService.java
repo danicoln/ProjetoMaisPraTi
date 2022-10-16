@@ -9,7 +9,7 @@ import menu.Menu;
 import model.Person;
 import model.Student;
 import model.User;
-import model.ValidaCpf;
+import model.ValidationCpf;
 import repository.PersonRepository;
 import repository.Repository;
 import repository.StudentRepository;
@@ -54,7 +54,7 @@ public class UserService {
 		String phone = sc.nextLine();
 		System.out.println("Digite seu CPF: ");
 		String cpf = sc.nextLine();
-		if (ValidaCpf.isValidCPF(cpf) == false) {
+		if (ValidationCpf.isValidCPF(cpf) == false) {
 			try {
 				System.out.println("CPF inválido!!! Tente novamente!");
 			} catch (Exception e) {

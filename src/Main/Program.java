@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import exception.ProgramException;
 import menu.Menu;
-import model.ValidaCpf;
+import model.ValidationCpf;
 import service.UserService;
 
 public class Program {
@@ -25,25 +25,31 @@ public class Program {
 			 * case 1: confere se existe o cpf informado, caso não exista, o programa pede
 			 * para cadastrar o usuário. Se inserir uma nota, é criado um aluno; Se não
 			 * inserir uma nota, é criado uma pessoa.
+			 * 
+			 * English: checks if the cpf informed exists, if it does not exist, the program
+			 * asks to register the user. If you enter a grade, a student is created; If you
+			 * do not enter a note, a person is created.
 			 */
 
 			case 1:
 				Menu.infoCpf();
 				String cpf = sc.next();
-				ValidaCpf.isValidCPF(cpf);
-				while (ValidaCpf.isValidCPF(cpf) == true) {
+				ValidationCpf.isValidCPF(cpf);
+				while (ValidationCpf.isValidCPF(cpf) == true) {
 					userService.checkCpf(cpf);
 					break;
 
 				}
-				if (ValidaCpf.isValidCPF(cpf) == false) {
+				if (ValidationCpf.isValidCPF(cpf) == false) {
 					throw new ProgramException("CPF inválido!");
 				}
 				break;
 
 			/*
 			 * ==========================================================================
-			 * case 2: busca o usuário na memória
+			 * case 2: busca o usuário na memória.
+			 * 
+			 * English: Find the user in memory.
 			 */
 
 			case 2:
@@ -56,7 +62,9 @@ public class Program {
 
 			/*
 			 * ==========================================================================
-			 * case 3: Devolve uma lista de pessoas ou alunos cadastrados
+			 * case 3: Devolve uma lista de pessoas ou alunos cadastrados.
+			 * 
+			 * English: Gives it back a list of saved person or students.
 			 */
 
 			case 3:
@@ -86,7 +94,9 @@ public class Program {
 
 			/*
 			 * ==========================================================================
-			 * case 4: Remove o usuário específico
+			 * case 4: Remove o usuário específico.
+			 * 
+			 * English: Removal the specific user.
 			 */
 
 			case 4:
@@ -97,7 +107,9 @@ public class Program {
 
 			/*
 			 * ==========================================================================
-			 * case 5: Atualiza os dados do usuário
+			 * case 5: Atualiza os dados do usuário.
+			 * 
+			 * English: Update the user data.
 			 */
 
 			case 5:
@@ -107,7 +119,9 @@ public class Program {
 
 			/*
 			 * ==========================================================================
-			 * case 0: Encerra o programa
+			 * case 0: Encerra o programa.
+			 * 
+			 * English: Close the program.
 			 */
 
 			case 0:
