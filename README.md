@@ -41,7 +41,7 @@ LinkedIn: https://www.linkedin.com/in/daniellincolndev
 
 e-mail: lincolndeveloper@outlook.com
 
-==============================================================================================
+
 
 # Atividades:
 Criar um CRUD (Create, Read, Update, Delete) de pessoas/alunos no terminal usando somente Java:
@@ -70,5 +70,4 @@ Todas as informacoes ficam em memoria local. Nao é necessário cadastrar em ban
 Não deve ser usado nenhum framework neste projeto. Deve-se usar recursos nativos do Java.
 O avaliado deve disponibilizar o projeto no Github com link público para que as empresas interessadas na contratação possam avaliá-lo.
 
-==============================================================================================
 
