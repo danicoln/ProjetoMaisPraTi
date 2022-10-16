@@ -3,10 +3,11 @@ package util;
 public class Counter {
 	
 
-	private static Integer cont = 0;
+	private static Integer count = 0;
 	
 	public static Integer nextId() {
-		return cont++;
+		count++;
+		return count;
 	}
 	
 }
