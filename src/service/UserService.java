@@ -34,7 +34,7 @@ public class UserService {
 		List<User> listUser = this.userRepository.findAll();
 		for (User user : listUser) {
 			if (user.getCpf().equalsIgnoreCase(cpf)) {
-				user.printData(); 
+				user.printData();
 				System.out.println("O CPF informado já existe para esta pessoa! Tente novamente!");
 				return user;
 			}
@@ -79,7 +79,7 @@ public class UserService {
 			double gradeFinal = sc.nextDouble();
 			Student student = new Student(name, gradeFinal, dateBirth, phone, cpf);
 			System.out.println("Aluno(a) cadastrado(a) com sucesso!");
-			student.printData(); 
+			student.printData();
 			return this.studentRepository.save(student);
 		}
 		return null; // verificar o retorno - add exception
@@ -93,7 +93,7 @@ public class UserService {
 			String cpfPerson = sc.next();
 
 			Person person = this.personRepository.findForCpf(cpfPerson);
-			person.printData(); 
+			person.printData();
 			return person;
 
 		} else if (opChoose == 2) {
@@ -101,7 +101,7 @@ public class UserService {
 			String cpfStudent = sc.next();
 
 			Student student = this.studentRepository.findForCpf(cpfStudent);
-			student.printData(); 
+			student.printData();
 			return student;
 
 		} else if (opChoose == 3) {
