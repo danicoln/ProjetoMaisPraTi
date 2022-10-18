@@ -12,10 +12,6 @@ O projeto consiste em adicionar um usuário informando os dados básicos e caso 
 ## Back end
 - Java
 
-## Implantação em produção
-- Inclusão de exceptions em andamento;
-- Inclusão de validação de CPF em andamento;
-
 # Como executar o projeto
 
 ## Back end
