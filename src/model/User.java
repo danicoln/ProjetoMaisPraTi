@@ -63,8 +63,7 @@ public class User implements Database {
 
 	public String getDateCreate() {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-		String dateFormat = this.dateCreate.format(formatter);
-		return dateFormat;
+		return this.dateCreate.format(formatter);
 	}
 
 	public void setDateCreate(LocalDateTime dateCreate) {
@@ -73,8 +72,7 @@ public class User implements Database {
 
 	public String getDateUpdate() {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-		String dateFormat = this.dateCreate.format(formatter);
-		return dateFormat;
+		return this.dateCreate.format(formatter);
 	}
 
 	public void setDateUpdate(LocalDateTime dateUpdate) {
