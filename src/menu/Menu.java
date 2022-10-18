@@ -3,14 +3,14 @@ package menu;
 public class Menu {
 
 	public static void menu1() {
-		System.out.println("========= Acesso ao Sistema ========= \n");
-		System.out.println("| 1. Cadastrar usuário");
-		System.out.println("| 2. Buscar usuário");
-		System.out.println("| 3. Listar usuários");
-		System.out.println("| 4. Remover usuário");
-		System.out.println("| 5. Atualizar usuário");
-		System.out.println("| 0. Sair do sistema");
-		System.out.println("\n=====================================");
+		System.out.println("========= Acesso ao Sistema =========\n\n"
+				+ "| 1. Cadastrar usuário\n"
+				+ "| 2. Buscar usuário\n"
+				+ "| 3. Listar usuários\n"
+				+ "| 4. Remover usuário\n"
+				+ "| 5. Atualizar usuário\n"
+				+ "| 0. Sair do sistema\n"
+				+ "\n=====================================");
 	}
 
 	public static void infoCpf() {
@@ -18,17 +18,19 @@ public class Menu {
 	}
 
 	public static void findUser() {
-		System.out.println("======= Escolha a opção desejada =======");
-		System.out.println("| 1. Buscar uma pessoa");
-		System.out.println("| 2. Buscar um aluno");
-		System.out.println("| 3. Encerrar");
+		System.out.println("======= Escolha a opção desejada =======\n\n"
+				+ "| 1. Buscar uma pessoa\n"
+				+ "| 2. Buscar um aluno\n"
+				+ "| 3. Voltar ao menu anterior\n"
+				+ "\n=====================================");
 	}
 
 	public static void userList() {
-		System.out.println("========= Escolha a opção =========\n");
-		System.out.println("| 1. Listar alunos");
-		System.out.println("| 2. Listar pessoas");
-		System.out.println("| 3. Para voltar ao menu anterior");
+		System.out.println("========= Escolha a opção =========\n"
+				+ "| 1. Listar alunos\n"
+				+ "| 2. Listar pessoas\n"
+				+ "| 3. Para voltar ao menu anterior\n"
+				+ "\n=====================================");
 	}
 
 	public static void studentsList() {
@@ -40,22 +42,26 @@ public class Menu {
 	}
 
 	public static void removeUser() {
-		System.out.println("Escolha a opção desejada: ");
-		System.out.println("| 1. Remover um aluno");
-		System.out.println("| 2. Remover uma pessoa");
+		System.out.println("Escolha a opção desejada: \n"
+				+ "| 1. Remover um aluno\n"
+				+ "| 2. Remover uma pessoa\n"
+				+ "| 3. Voltar ao menu anterior\n"
+				+ "\n=====================================");
 	}
 
 	public static void confirmRemoval() {
-		System.out.println("Confirma a remoção do aluno?\n");
-		System.out.println("| 1. Confirmar");
-		System.out.println("| 2. Cancelar");
+		System.out.println("Confirma a remoção do aluno?\n"
+				+ "| 1. Confirmar\n"
+				+ "| 2. Cancelar\n"
+				+ "\n=====================================");
 	}
 
 	public static void updateUser() {
-		System.out.println("========= Digite a opção =========\n");
-		System.out.println("| 1. Atualizar aluno");
-		System.out.println("| 2. Atualizar pessoa");
-		System.out.println("| 3. Retornar ao menu anterior");
+		System.out.println("========= Digite a opção =========\n"
+				+ "| 1. Atualizar aluno\n"
+				+ "| 2. Atualizar pessoa\n"
+				+ "| 3. Retornar ao menu anterior\n"
+				+ "\n=====================================");
 	}
 
 }
