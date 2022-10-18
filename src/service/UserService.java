@@ -29,7 +29,6 @@ public class UserService {
 
 	public UserService(Scanner sc) {
 		this.sc = sc;
-		this.personRepository.save(new Person("Daniel", "29/04/1961", "7401", "02552214878"));
 	}
 
 	public User checkCpf(String cpf) throws ProgramException {
