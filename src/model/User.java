@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 import util.Counter;
@@ -60,16 +61,20 @@ public class User implements Database {
 		this.cpf = cpf;
 	}
 
-	public LocalDateTime getDateCreate() {
-		return dateCreate;
+	public String getDateCreate() {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+		String dateFormat = this.dateCreate.format(formatter);
+		return dateFormat;
 	}
 
 	public void setDateCreate(LocalDateTime dateCreate) {
 		this.dateCreate = dateCreate;
 	}
 
-	public LocalDateTime getDateUpdate() {
-		return dateUpdate;
+	public String getDateUpdate() {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+		String dateFormat = this.dateCreate.format(formatter);
+		return dateFormat;
 	}
 
 	public void setDateUpdate(LocalDateTime dateUpdate) {
